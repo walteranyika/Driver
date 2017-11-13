@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    app:cardElevation="10dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:id="@+id/inputEmail"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:text=""
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            app:met_singleLineEllipsis="true"
+            app:met_baseColor="@color/colorPrimary"
+            app:met_floatingLabel="highlight"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:id="@+id/inputPassword"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:text=""
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            app:met_singleLineEllipsis="true"
+            app:met_baseColor="@color/colorPrimary"
+            app:met_floatingLabel="highlight"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:id="@+id/inputNames"
+            android:hint="Names"
+            android:inputType="textPersonName"
+            android:text=""
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            app:met_singleLineEllipsis="true"
+            app:met_baseColor="@color/colorPrimary"
+            app:met_floatingLabel="highlight"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:id="@+id/inputPhone"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:text=""
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            app:met_singleLineEllipsis="true"
+            app:met_baseColor="@color/colorPrimary"
+            app:met_floatingLabel="highlight"/>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

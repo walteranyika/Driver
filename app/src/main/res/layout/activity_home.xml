@@ -1,0 +1,74 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_margin="12dp"
+        android:weightSum="4"
+        android:orientation="horizontal"
+        android:id="@+id/layout_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+          <EditText
+              android:hint="Enter Pickup Location"
+              android:layout_weight="3"
+              android:id="@+id/edtPlace"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+          <Button
+              android:id="@+id/btnGo"
+              android:text="Go"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <fragment
+        android:layout_below="@id/layout_panel"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="io.clone.dereva.HomeActivity"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:weightSum="10">
+
+            <com.github.glomadrian.materialanimatedswitch.MaterialAnimatedSwitch
+                android:id="@+id/location_switch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                app:ball_press_color="@android:color/white"
+                app:ball_release_color="@color/colorBallRelease"
+                app:base_press_color="@color/colorBasePress"
+                app:base_release_color="@color/colorBaseRelease"
+                app:icon_press="@drawable/ic_location_on"
+                app:icon_release="@drawable/ic_location_off"
+                />
+
+            <Button
+                android:id="@+id/btn_find_user"
+                android:layout_weight="7"
+                android:text="FIND USER"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
+

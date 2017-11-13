@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1003117996187",
+    "firebase_url": "https://uber-finale.firebaseio.com",
+    "project_id": "uber-finale",
+    "storage_bucket": "uber-finale.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1003117996187:android:388a11c9c0657817",
+        "android_client_info": {
+          "package_name": "io.clone.dereva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1003117996187-iubhjepa3q34u911e0tbvsl6salp2b13.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.clone.dereva",
+            "certificate_hash": "3e00044619b6251bad66eaab02a78b1a96c1454f"
+          }
+        },
+        {
+          "client_id": "1003117996187-9ac9u42o0nku35im820g9r2fu2tcm5nh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFlQdeyMrT-N_R-vcnef87MwtuVHPE4dA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1003117996187-9ac9u42o0nku35im820g9r2fu2tcm5nh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

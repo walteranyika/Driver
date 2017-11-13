@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff3737"
+    android:id="@+id/rootLayout"
+    tools:context="io.clone.dereva.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="U B E R"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:text="PATNER"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_rider_app"
+        android:textColor="#c6c6d7"
+        android:textSize="12sp"
+        android:text="LOOKING FOR THE RIDER APP?"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_above="@id/txt_rider_app"
+        android:weightSum="2"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:background="@drawable/btn_sign_in_background"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="6dp"
+            android:id="@+id/sign_in_btn"
+            android:text="SIGN IN"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:background="@drawable/btn_register_background"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="6dp"
+            android:id="@+id/register_btn"
+            android:text="REGISTER"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>
