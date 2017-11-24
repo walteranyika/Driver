@@ -23,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import dmax.dialog.SpotsDialog;
+import io.clone.dereva.common.Common;
 import io.clone.dereva.models.User;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -47,10 +48,17 @@ public class MainActivity extends AppCompatActivity {
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
                 .setDefaultFontPath("fonts/Arkhip_font.ttf")
                 .setFontAttrId(R.attr.fontPath).build());
-        setContentView(R.layout.activity_main);
+
         mFirebaseAuth = FirebaseAuth.getInstance();
+        if (mFirebaseAuth.getCurrentUser()!=null){
+            Log.d(TAG, "User_ID: "+mFirebaseAuth.getCurrentUser().getUid());
+            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+            finish();
+        }
+        setContentView(R.layout.activity_main);
+
         mFirebaseDatabase = FirebaseDatabase.getInstance();
-        mUsersRef = mFirebaseDatabase.getReference("Users");
+        mUsersRef = mFirebaseDatabase.getReference(Common.USER_DRIVERS_TABLE);
 
 
         mRootLayout = (RelativeLayout) findViewById(R.id.rootLayout);

@@ -5,50 +5,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff3737"
-    android:id="@+id/rootLayout"
-    tools:context="io.clone.dereva.MainActivity">
+    android:background="@android:color/black"
+    tools:context="io.clone.dereva.CustomerCallActivity">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/map_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/map"
+        app:civ_border_color="@android:color/holo_green_light"
+        app:civ_border_width="5dp"/>
+    
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:layout_width="wrap_content"
+        android:layout_below="@id/map_img"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <TextView
-            android:text="Z U B E R"
-            android:textColor="@android:color/white"
-            android:textSize="36sp"
             android:textAlignment="center"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtTime"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <TextView
-            android:layout_marginTop="20dp"
-            android:text="PATNER"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
             android:textAlignment="center"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtDistance"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/txtAddress"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/txt_rider_app"
-        android:textColor="#c6c6d7"
-        android:textSize="12sp"
-        android:text="LOOKING FOR THE RIDER APP?"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
     <LinearLayout
-        android:layout_above="@id/txt_rider_app"
+       android:layout_alignParentBottom="true"
         android:weightSum="2"
         android:layout_margin="16dp"
         android:orientation="horizontal"
@@ -59,8 +61,8 @@
             android:background="@drawable/btn_sign_in_background"
             android:textColor="@android:color/white"
             android:layout_marginRight="6dp"
-            android:id="@+id/sign_in_btn"
-            android:text="SIGN IN"
+            android:id="@+id/accept_btn"
+            android:text="ACCEPT"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"/>
@@ -69,8 +71,8 @@
             android:background="@drawable/btn_register_background"
             android:textColor="@android:color/white"
             android:layout_marginLeft="6dp"
-            android:id="@+id/register_btn"
-            android:text="REGISTER"
+            android:id="@+id/cancel_btn"
+            android:text="CANCEL"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"/>
