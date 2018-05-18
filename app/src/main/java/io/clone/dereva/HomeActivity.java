@@ -101,9 +101,13 @@ public class HomeActivity extends FragmentActivity implements
     private Handler handler;
     private LatLng startPosition, endPosition, currentPosition;
     private int index, next;
+
+
 //    private Button btnGo;
     private PlaceAutocompleteFragment place;
     private String destination;
+
+
     private PolylineOptions polylineOptions, blackPolylineOptions;
     private Polyline blackPolyline, greyPolyline;
 
@@ -200,6 +204,7 @@ public class HomeActivity extends FragmentActivity implements
         Log.d(TAG, "updateFirebaseToken: "+token.getToken());
     }
 
+    //TODO Drivers Index On g
     private void getDirection() {
         currentPosition=new LatLng(Common.mLastLocation.getLatitude(),Common.mLastLocation.getLongitude());
         String requestApi=null;
@@ -329,6 +334,8 @@ public class HomeActivity extends FragmentActivity implements
         }
         return poly;
     }
+
+
     private void setUpLocation() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED &&

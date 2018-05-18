@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference mUsersRef;
     SpotsDialog progress_dialog;
 
+    //  compile 'uk.co.chrisjenx:calligraphy:2.3.0'
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
@@ -45,9 +46,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
                 .setDefaultFontPath("fonts/Arkhip_font.ttf")
                 .setFontAttrId(R.attr.fontPath).build());
+
 
         mFirebaseAuth = FirebaseAuth.getInstance();
         if (mFirebaseAuth.getCurrentUser()!=null){
